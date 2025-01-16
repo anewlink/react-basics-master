@@ -11,11 +11,13 @@ import './App.css';
   const mainHeading = React.createElement('h1', null, 'My Blog');
   const main = React.createElement('main', {id: 'main'}, mainHeading, article);*/
 function App() {
-  const articleHeading = React.createElement('h2', null, 'My first blog post');
-  const paragraph = React.createElement('p', {className: 'text'}, 'This is the content of my post');
-  const article = React.createElement('article', null, articleHeading, paragraph);
-  const mainHeading = React.createElement('h1', null, 'My Blog');
-  const main = React.createElement('main', {id: 'main'}, mainHeading, article);
+  const main = <main id="main">
+    <h1>'My Blog'</h1>
+    <article>
+      <h2>My first blog post</h2>
+      <p className="text">This is the content of my post</p>
+    </article>
+  </main>;
   return (
     //button
     main
