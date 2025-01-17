@@ -13,20 +13,14 @@ import './App.css';
   const articleHeading = 'My first blog post';
   const paragraphClass = 'text'
 function App() {
-  let count = 0;
-  const interval = setInterval(() => {
-    if(count === 100){
-      clearInterval(interval)
-    }else {
-      count++;
-    }
-  }, 30);
+  let x = 3;
+  let y = 4;
 
   const main = <main id="main">
     <h1>'My Blog'</h1>
     <article>
       <h2>{articleHeading}</h2>
-      <p className={paragraphClass}>{count}</p>
+      <p className={paragraphClass}>{x * y}</p>
       <input maxLength="10" readOnly/>
     </article>
   </main>;
