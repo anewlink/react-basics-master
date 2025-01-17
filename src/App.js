@@ -4,18 +4,22 @@ import './App.css';
 
       // React.createElement(type,[props], [...children])
   // const button = React.createElement('button',{type: 'button'}, 'Save');
-  const button = <button type='button'>Save</button>;
-  /* const articleHeading = React.createElement('h2', null, 'My first blog post');
-  const paragraph = React.createElement('p', {className: 'text'}, 'This is the content of my post');
+  // const button = <button type='button'>Save</button>;
+  /*const paragraph = React.createElement('p', {className: 'text'}, 'This is the content of my post');
   const article = React.createElement('article', null, articleHeading, paragraph);
   const mainHeading = React.createElement('h1', null, 'My Blog');
   const main = React.createElement('main', {id: 'main'}, mainHeading, article);*/
+  // const articleHeading = React.createElement('h2', null, 'My first blog post');
+  const articleHeading = 'My first blog post';
+  const paragraphClass = 'text'
 function App() {
+
   const main = <main id="main">
     <h1>'My Blog'</h1>
     <article>
-      <h2>My first blog post</h2>
-      <p className="text">This is the content of my post</p>
+      <h2>{articleHeading}</h2>
+      <p className={paragraphClass}>This is the content of my post</p>
+      <input maxLength="10" readOnly/>
     </article>
   </main>;
   return (
