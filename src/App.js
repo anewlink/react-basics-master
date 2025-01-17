@@ -13,12 +13,20 @@ import './App.css';
   const articleHeading = 'My first blog post';
   const paragraphClass = 'text'
 function App() {
+  let count = 0;
+  const interval = setInterval(() => {
+    if(count === 100){
+      clearInterval(interval)
+    }else {
+      count++;
+    }
+  }, 30);
 
   const main = <main id="main">
     <h1>'My Blog'</h1>
     <article>
       <h2>{articleHeading}</h2>
-      <p className={paragraphClass}>This is the content of my post</p>
+      <p className={paragraphClass}>{count}</p>
       <input maxLength="10" readOnly/>
     </article>
   </main>;
