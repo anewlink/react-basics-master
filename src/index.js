@@ -3,8 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// const getFormattedText = string => `The count is: ${string}`;
+const isError = true;
+const articleHeading = 'My first blog post';
+const paragraphClass = 'text'
+let count = 0;
+const interval = setInterval(() => {
+    const main = <main id="main">
+        <h1>'My Blog'</h1>
+        <article>
+            <h2>{articleHeading}</h2>
+            <p className={isError ? 'error' : 'standard'}>{isError ? 'Panic! Something went wrong' : 'Stop panicking!'}</p>
+            <input maxLength="10" readOnly />
+        </article>
+    </main>;
+    ReactDOM.render(main, document.getElementById('root'));
+    if (count === 1000) {
+        clearInterval(interval)
+    } else {
+        count++;
+    }
+}, 30);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
